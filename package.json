@@ -17,6 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
+    "lint": "./node_modules/.bin/eslint . --fix",
     "clean": "prettier '**/*' --write .  --ignore-unknown"
   },
   "browserslist": {
