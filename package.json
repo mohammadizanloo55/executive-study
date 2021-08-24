@@ -44,6 +44,7 @@
     "prettier": "2.3.2"
   },
   "lint-staged": {
-    "*.*": "prettier '**/*' --write --ignore-unknown"
+    "*.*": "prettier '**/*' --write --ignore-unknown",
+    "*.{js,jsx}": "./node_modules/.bin/eslint --fix"
   }
 }
