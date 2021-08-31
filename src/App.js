@@ -5,6 +5,9 @@ import Loading from "./Components/Loading/Loading";
 
 const Header = lazy(() => import("./Components/Header/Header"));
 const Detail = lazy(() => import("./Components/Detail/Detail"));
+const UniversitiesSwiper = lazy(() =>
+  import("./Components/UniversitiesSwiper/UniversitiesSwiper")
+);
 const App = () => {
   const theme = extendTheme({ direction: "rtl" });
 
@@ -14,6 +17,7 @@ const App = () => {
         <Container maxW="8xl">
           <Header />
           <Detail />
+          <UniversitiesSwiper />
         </Container>
       </Suspense>
     </ChakraProvider>
