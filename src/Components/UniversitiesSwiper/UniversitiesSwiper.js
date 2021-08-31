@@ -31,7 +31,7 @@ const UniversitiesSwiper = () => {
           opacity="0.7"
           textAlign="center"
         >
-          Featured Universities
+          لورم ایپسوم
         </Text>
         <CustomSwiper
           Style={{
