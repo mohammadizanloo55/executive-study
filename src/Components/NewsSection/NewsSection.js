@@ -30,9 +30,13 @@ const NewsSection = () => {
             overflow="hidden"
             rounded="3xl"
             alignItems="center"
+            _hover={{
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+            }}
             maxW="xs"
+            transition="all 0.4s"
             flexDirection="column"
-            shadow="2xl"
+            shadow="xl"
           >
             <Image height="250" objectFit="cover" src={CardImage} />
             <Text
