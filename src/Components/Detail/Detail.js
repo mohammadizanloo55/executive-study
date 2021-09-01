@@ -1,19 +1,7 @@
-import {
-  Button,
-  Flex,
-  Grid,
-  Icon,
-  Image,
-  Text,
-  useMediaQuery,
-} from "@chakra-ui/react";
-import {
-  FiArrowLeft,
-  FiFacebook,
-  FiInstagram,
-  FiTwitter,
-} from "react-icons/fi";
+import { Flex, Grid, Icon, Image, Text, useMediaQuery } from "@chakra-ui/react";
+import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 
+import ForwardButton from "../ForwardButton/ForwardButton";
 import StudentBackground from "./StudentBackground.png";
 import StudentImage from "./StudentImage.png";
 
@@ -69,15 +57,7 @@ const Detail = () => {
           ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
         </Text>
 
-        <Button
-          mt="20"
-          colorScheme="blue"
-          backgroundColor="#707CFF"
-          color="white"
-        >
-          آنلاین ثبت نام کنید
-          <Icon as={FiArrowLeft} pr="1" fontSize="2xl" color="#2F2F2F" />
-        </Button>
+        <ForwardButton ButtonText="آنلاین ثبت نام کنید" />
 
         <Grid
           my="10"
