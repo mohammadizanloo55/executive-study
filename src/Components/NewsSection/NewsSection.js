@@ -19,8 +19,8 @@ const NewsSection = () => {
         mt="20"
         gridTemplateColumns={{
           base: "repeat(1, auto)",
-          sm: "repeat(2, auto)",
-          md: "repeat(3,auto)",
+          md: "repeat(2,auto)",
+          lg: "repeat(3,auto)",
         }}
         gap="5"
       >
