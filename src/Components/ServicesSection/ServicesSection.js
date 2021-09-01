@@ -54,7 +54,7 @@ const ServicesCard = () => {
               ستون و سطرآنچنان که لازم است
             </Text>
             <Link fontSize="md" mt="6" color="#717CFF">
-              لورم ایپسوم
+              اطلاعات بیشتر
               <Icon as={FiArrowLeft} color="#37474F" mr="3" fontSize="xl" />
             </Link>
           </Box>
