@@ -1,13 +1,7 @@
-import { Box, Center, Flex, Grid, Icon, Link, Text } from "@chakra-ui/react";
-import {
-  FiArrowLeft,
-  FiBook,
-  FiClipboard,
-  FiHome,
-  FiTarget,
-  FiUsers,
-} from "react-icons/fi";
+import { Box, Center, Flex, Grid, Icon, Text } from "@chakra-ui/react";
+import { FiBook, FiClipboard, FiHome, FiTarget, FiUsers } from "react-icons/fi";
 
+import ForwardLink from "../ForwardLink/ForwardLink";
 import Titles from "../Titles/Titles";
 
 const ServicesCard = () => {
@@ -53,10 +47,13 @@ const ServicesCard = () => {
               استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
               ستون و سطرآنچنان که لازم است
             </Text>
-            <Link fontSize="md" mt="6" color="#717CFF">
-              اطلاعات بیشتر
-              <Icon as={FiArrowLeft} color="#37474F" mr="3" fontSize="xl" />
-            </Link>
+
+            <ForwardLink
+              LinkText="اطلاعات بیشتر"
+              LinkProps={{
+                mt: 6,
+              }}
+            />
           </Box>
         ))}
       </Grid>
