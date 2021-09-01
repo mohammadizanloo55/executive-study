@@ -11,6 +11,8 @@ const UniversitiesSwiper = lazy(() =>
 const ServicesSection = lazy(() =>
   import("./Components/ServicesSection/ServicesSection")
 );
+const NewsSection = lazy(() => import("./Components/NewsSection/NewsSection"));
+
 const App = () => {
   const theme = extendTheme({ direction: "rtl" });
 
@@ -22,6 +24,7 @@ const App = () => {
           <Detail />
           <UniversitiesSwiper />
           <ServicesSection />
+          <NewsSection />
         </Container>
       </Suspense>
     </ChakraProvider>
