@@ -8,6 +8,9 @@ const Detail = lazy(() => import("./Components/Detail/Detail"));
 const UniversitiesSwiper = lazy(() =>
   import("./Components/UniversitiesSwiper/UniversitiesSwiper")
 );
+const ServicesSection = lazy(() =>
+  import("./Components/ServicesSection/ServicesSection")
+);
 const App = () => {
   const theme = extendTheme({ direction: "rtl" });
 
@@ -18,6 +21,7 @@ const App = () => {
           <Header />
           <Detail />
           <UniversitiesSwiper />
+          <ServicesSection />
         </Container>
       </Suspense>
     </ChakraProvider>
