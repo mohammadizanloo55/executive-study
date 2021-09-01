@@ -31,7 +31,7 @@ const UniversitiesSwiper = () => {
           opacity="0.7"
           textAlign="center"
         >
-          لورم ایپسوم
+          چه کسانی از سرویس های ما استفاده میکنند؟
         </Text>
         <CustomSwiper
           Style={{
