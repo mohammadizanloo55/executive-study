@@ -12,7 +12,7 @@ const CustomSwiper = ({ SlidesPerView, Style, Slides }) => (
     preloadImages={false}
     lazy={true}
     autoplay={{
-      delay: 800,
+      delay: 1500,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
       waitForTransition: true,
