@@ -8,34 +8,16 @@ import {
   FiUsers,
 } from "react-icons/fi";
 
+import Titles from "../Titles/Titles";
+
 const ServicesCard = () => {
   const CardIcons = [FiTarget, FiBook, FiUsers, FiClipboard, FiHome];
   return (
     <Flex alignItems="center" flexDirection="column" my="10" fontSize="2xl">
-      <Text
-        fontSize={{
-          base: "2xl",
-          md: "3xl",
-        }}
-        fontWeight="bold"
-      >
-        لورم ایپسوم
-      </Text>
-      <Text
-        mt="4"
-        textAlign="justify"
-        fontWeight="bold"
-        maxW={{
-          md: "container.sm",
-          lg: "container.md",
-        }}
-        color="#7D7D7D"
-        fontSize="medium"
-      >
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-        از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-        سطرآنچنان که لازم است
-      </Text>
+      <Titles
+        TitleText="سرویس های ما"
+        SubTitleText="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده"
+      />
       <Grid
         mt="5"
         justifyItems="center"
