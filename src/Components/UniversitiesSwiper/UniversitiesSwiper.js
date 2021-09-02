@@ -11,6 +11,22 @@ const CustomSwiper = lazy(() => import("../CustomSwiper/CustomSwiper"));
 
 const UniversityIcons = [University1, University2, University3, University4];
 
+const LogoSwiper = () => (
+  <CustomSwiper
+    Style={{
+      paddingBottom: "4rem",
+    }}
+    SlidesPerView={[1, 2, 3, 4]}
+  >
+    {UniversityIcons.map((IconSrc) => (
+      <SwiperSlide key={IconSrc}>
+        <Center justifyContent="center">
+          <Image src={IconSrc} />
+        </Center>
+      </SwiperSlide>
+    ))}
+  </CustomSwiper>
+);
 const UniversitiesSwiper = () => {
   return (
     <Suspense fallback={null}>
@@ -28,20 +44,7 @@ const UniversitiesSwiper = () => {
         >
           چه کسانی از سرویس های ما استفاده میکنند؟
         </Text>
-        <CustomSwiper
-          Style={{
-            paddingBottom: "4rem",
-          }}
-          SlidesPerView={[1, 2, 3, 4]}
-        >
-          {UniversityIcons.map((IconSrc) => (
-            <SwiperSlide key={IconSrc}>
-              <Center justifyContent="center">
-                <Image src={IconSrc} />
-              </Center>
-            </SwiperSlide>
-          ))}
-        </CustomSwiper>
+        <LogoSwiper />
       </Box>
     </Suspense>
   );
