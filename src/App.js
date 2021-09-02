@@ -21,6 +21,9 @@ const CountriesSection = lazy(() =>
 const TestimonialSection = lazy(() =>
   import("./Components/TestimonialSection/TestimonialSection")
 );
+const MessageBoxSection = lazy(() =>
+  import("./Components/MessageBoxSection/MessageBoxSection")
+);
 const App = () => {
   const theme = extendTheme({ direction: "rtl" });
 
@@ -36,6 +39,7 @@ const App = () => {
           <EventsSection />
           <CountriesSection />
           <TestimonialSection />
+          <MessageBoxSection />
         </Container>
       </Suspense>
     </ChakraProvider>
