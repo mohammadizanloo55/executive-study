@@ -37,7 +37,6 @@ const UniversitiesSwiper = () => {
           Style={{
             paddingBottom: "4rem",
           }}
-          UniversityIcons={UniversityIcons}
           SlidesPerView={ResponsiveSlidesPerView}
           Slides={UniversityCallback}
         />
