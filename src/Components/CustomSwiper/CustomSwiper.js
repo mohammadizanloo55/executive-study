@@ -23,7 +23,6 @@ const CustomSwiper = ({ SlidesPerView, Style, ...props }) => {
         pauseOnMouseEnter: true,
         waitForTransition: true,
       }}
-      onMouseOut={() => console.log("da")}
       spaceBetween={50}
       slidesPerView={ResponsiveSlidesPerView}
       style={Style}
