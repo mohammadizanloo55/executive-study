@@ -3,10 +3,10 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/components/pagination/pagination.min.css";
 
 import SwiperCore, { Autoplay, Lazy, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 
 SwiperCore.use([Pagination, Autoplay, Lazy]);
-const CustomSwiper = ({ SlidesPerView, Style, Slides }) => (
+const CustomSwiper = ({ SlidesPerView, Style, ...props }) => (
   <Swiper
     loop={true}
     preloadImages={false}
@@ -23,10 +23,7 @@ const CustomSwiper = ({ SlidesPerView, Style, Slides }) => (
     style={Style}
     pagination={true}
   >
-    {Slides.map((Slide, Index) => (
-      // eslint-disable-next-line react/no-array-index-key
-      <SwiperSlide key={Index}>{Slide()}</SwiperSlide>
-    ))}
+    {props.children}
   </Swiper>
 );
 export default CustomSwiper;
