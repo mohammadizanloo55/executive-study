@@ -8,7 +8,7 @@ import { Swiper } from "swiper/react";
 
 SwiperCore.use([Pagination, Autoplay, Lazy]);
 const CustomSwiper = ({ SlidesPerView, Style, ...props }) => {
-  const ResponsiveSlidesPerView = useBreakpointValue([...SlidesPerView]);
+  const ResponsiveSlidesPerView = useBreakpointValue(SlidesPerView);
   if (!ResponsiveSlidesPerView) {
     return null;
   }
