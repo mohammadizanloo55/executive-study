@@ -15,6 +15,9 @@ const NewsSection = lazy(() => import("./Components/NewsSection/NewsSection"));
 const EventsSection = lazy(() =>
   import("./Components/EventsSection/EventsSection")
 );
+const CountriesSection = lazy(() =>
+  import("./Components/CountriesSection/CountriesSection")
+);
 const App = () => {
   const theme = extendTheme({ direction: "rtl" });
 
@@ -28,6 +31,7 @@ const App = () => {
           <ServicesSection />
           <NewsSection />
           <EventsSection />
+          <CountriesSection />
         </Container>
       </Suspense>
     </ChakraProvider>
