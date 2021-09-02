@@ -1,5 +1,6 @@
-import { Box, Center, Image, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Center, Image, Text } from "@chakra-ui/react";
 import { lazy, Suspense } from "react";
+import { SwiperSlide } from "swiper/react";
 
 import University1 from "./University1.png";
 import University2 from "./University2.png";
@@ -9,14 +10,8 @@ import University4 from "./University4.png";
 const CustomSwiper = lazy(() => import("../CustomSwiper/CustomSwiper"));
 
 const UniversityIcons = [University1, University2, University3, University4];
-const UniversityCallback = UniversityIcons.map((IconSrc) => () => (
-  <Center justifyContent="center">
-    <Image src={IconSrc} />
-  </Center>
-));
-const UniversitiesSwiper = () => {
-  const ResponsiveSlidesPerView = useBreakpointValue([1, 2, 3, 4]);
 
+const UniversitiesSwiper = () => {
   return (
     <Suspense fallback={null}>
       <Box mt="20" px="5">
@@ -37,9 +32,16 @@ const UniversitiesSwiper = () => {
           Style={{
             paddingBottom: "4rem",
           }}
-          SlidesPerView={ResponsiveSlidesPerView}
-          Slides={UniversityCallback}
-        />
+          SlidesPerView={[1, 2, 3, 4]}
+        >
+          {UniversityIcons.map((IconSrc) => (
+            <SwiperSlide key={IconSrc}>
+              <Center justifyContent="center">
+                <Image src={IconSrc} />
+              </Center>
+            </SwiperSlide>
+          ))}
+        </CustomSwiper>
       </Box>
     </Suspense>
   );
