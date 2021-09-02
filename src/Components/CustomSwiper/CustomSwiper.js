@@ -26,7 +26,9 @@ const CustomSwiper = ({ SlidesPerView, Style, ...props }) => {
       spaceBetween={50}
       slidesPerView={ResponsiveSlidesPerView}
       style={Style}
-      pagination={true}
+      pagination={{
+        clickable: true,
+      }}
     >
       {props.children}
     </Swiper>
