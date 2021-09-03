@@ -1,13 +1,12 @@
-import { Flex, Grid, Icon, Image, Text, useMediaQuery } from "@chakra-ui/react";
-import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
+import { Flex, Grid, Image, Text, useMediaQuery } from "@chakra-ui/react";
 
 import ForwardButton from "../ForwardButton/ForwardButton";
+import IconBar from "../IconBar/IconBar";
 import StudentBackground from "./StudentBackground.png";
 import StudentImage from "./StudentImage.png";
 
 const Detail = () => {
   const [IsBigScreen] = useMediaQuery("(min-width: 768px)");
-  const Icons = [FiInstagram, FiTwitter, FiFacebook];
 
   return (
     <Grid
@@ -77,17 +76,7 @@ const Detail = () => {
             md: "flex-end",
           }}
         >
-          {Icons.map((image) => (
-            <Icon
-              as={image}
-              key={image}
-              _hover={{
-                fill: "#3C5B9A",
-                cursor: "pointer",
-              }}
-              fontSize="3xl"
-            />
-          ))}
+          <IconBar />
         </Grid>
       </Flex>
       {IsBigScreen && (
