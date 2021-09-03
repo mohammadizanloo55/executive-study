@@ -24,6 +24,9 @@ const TestimonialSection = lazy(() =>
 const MessageBoxSection = lazy(() =>
   import("./Components/MessageBoxSection/MessageBoxSection")
 );
+const FooterSection = lazy(() =>
+  import("./Components/FooterSection/FooterSection")
+);
 const App = () => {
   const theme = extendTheme({ direction: "rtl" });
 
@@ -41,6 +44,7 @@ const App = () => {
           <TestimonialSection />
           <MessageBoxSection />
         </Container>
+        <FooterSection />
       </Suspense>
     </ChakraProvider>
   );
