@@ -1,4 +1,5 @@
 import { Center, Flex, Image, Text } from "@chakra-ui/react";
+import LazyLoad from "react-lazyload";
 import { SwiperSlide } from "swiper/react";
 
 import CustomSwiper from "../CustomSwiper/CustomSwiper";
@@ -18,19 +19,21 @@ const CardsSwiper = () => (
     {CardImages.map((CardImage) => (
       <SwiperSlide key={CardImage}>
         <Flex flexDir="column">
-          <Image
-            src={CardImage}
-            height="200px"
-            objectFit="cover"
-            rounded="3xl"
-          />
-          <Text my="4" fontSize="xl" color="#37474F">
-            لورم ایپسوم متن ساختگی
-          </Text>
-          <Text>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون
-          </Text>
+          <LazyLoad height="200">
+            <Image
+              fallbackSrc={CardImage}
+              height="200px"
+              objectFit="cover"
+              rounded="3xl"
+            />
+            <Text my="4" fontSize="xl" color="#37474F">
+              لورم ایپسوم متن ساختگی
+            </Text>
+            <Text>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون
+            </Text>
+          </LazyLoad>
         </Flex>
       </SwiperSlide>
     ))}

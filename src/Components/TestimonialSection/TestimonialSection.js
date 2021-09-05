@@ -1,4 +1,5 @@
 import { Box, Center, Flex, Grid, Image, Text } from "@chakra-ui/react";
+import LazyLoad from "react-lazyload";
 import { SwiperSlide } from "swiper/react";
 
 import CustomSwiper from "../CustomSwiper/CustomSwiper";
@@ -29,7 +30,9 @@ const CardsSwiper = () => (
           shadow="xl"
         >
           <Flex my="3">
-            <Image w="16" rounded="2xl" src={AvatarImage} />
+            <LazyLoad>
+              <Image w="16" rounded="2xl" fallbackSrc={AvatarImage} />
+            </LazyLoad>
             <Grid alignItems="center" mr="4">
               <Text fontSize="xl"> لورم ایپسوم </Text>
               <Text color="#37474F"> لورم ایپسوم </Text>

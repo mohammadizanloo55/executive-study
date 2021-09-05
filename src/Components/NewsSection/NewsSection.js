@@ -1,5 +1,6 @@
 import { Center, Flex, Grid, Icon, Image, Text } from "@chakra-ui/react";
 import { FiCalendar } from "react-icons/fi";
+import LazyLoad from "react-lazyload";
 
 import ForwardButton from "../ForwardButton/ForwardButton";
 import Titles from "../Titles/Titles";
@@ -38,7 +39,9 @@ const NewsSection = () => {
             flexDirection="column"
             shadow="xl"
           >
-            <Image height="250" objectFit="cover" src={CardImage} />
+            <LazyLoad height="250">
+              <Image height="250" objectFit="cover" fallbackSrc={CardImage} />
+            </LazyLoad>
             <Text
               display="flex"
               color="#565656"
