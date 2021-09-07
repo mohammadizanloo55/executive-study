@@ -1817,6 +1817,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/vazir@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/vazir/-/vazir-4.5.0.tgz#350b06f574e1185ab692b55c0638cc4c7b59cb6b"
+  integrity sha512-qCag0ShcK19uTv+Q8M5R64yAj+1MegSZMbgMHjDh/xUnrNV9oi2G6R/5xMB4wGMmNqzRywhSPsJMmg+7WqxlzA==
+
 "@frontendmonster/utils@0.3.11":
   version "0.3.11"
   resolved "https://registry.yarnpkg.com/@frontendmonster/utils/-/utils-0.3.11.tgz#399d11d6e24245a04ee07521ba085c26bf17c443"
