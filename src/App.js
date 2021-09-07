@@ -1,3 +1,5 @@
+import "@fontsource/vazir";
+
 import { ChakraProvider, Container, extendTheme } from "@chakra-ui/react";
 import { lazy, Suspense } from "react";
 
@@ -28,7 +30,13 @@ const FooterSection = lazy(() =>
   import("./Components/FooterSection/FooterSection")
 );
 const App = () => {
-  const theme = extendTheme({ direction: "rtl" });
+  const theme = extendTheme({
+    direction: "rtl",
+    fonts: {
+      heading: "Vazir",
+      body: "Vazir",
+    },
+  });
 
   return (
     <ChakraProvider theme={theme}>
